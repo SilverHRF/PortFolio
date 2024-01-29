@@ -21,11 +21,13 @@
         <div class="container">
             <nav>
                 <img src="" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Portefolio.html">Portefolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-square-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Puig Romain</p>
@@ -91,37 +93,37 @@
                 <i><img src="Images/LogoUnity.png"></i>
                 <h2>Unity</h2>
                 <p>Programmation en C# pour la création de l'architecture du jeu. intégration 3D, création de shader.</p>
-                    <a href="https://unity.com">en savoir plus</a>
+                    <a href="https://unity.com" target="_blank" >en savoir plus</a>
             </div>
             <div>
                 <i><img src="Images/LogoUnreal.png"></i>
                 <h2>Unreal</h2>
                 <p>Utilisation de blueprint pour l'architecture du jeu. Intégration 3D, création de shader, UI/UX.</p>
-                <a href="https://www.unrealengine.com/fr">en savoir plus</a>
+                <a href="https://www.unrealengine.com/fr" target="_blank">en savoir plus</a>
             </div>
             <div>
                 <i><img src="Images/LogoPhotoshop.png"></i>
                 <h2>Photoshop</h2>
                 <p>Édition d'image et retouche avec des outils puissants. Illustration et création visuelle. </p>
-                <a href="https://www.adobe.com/fr/products/photoshop.html">en savoir plus</a>
+                <a href="https://www.adobe.com/fr/products/photoshop.html" target="_blank">en savoir plus</a>
             </div>
             <div>
                 <i><img src="Images/LogoPremier.png"></i>
                 <h2>PremièrePro</h2>
                 <p>Montage vidéo avancé, transitions fluides, intégration d'effets After Effects. </p>
-                <a href="https://www.adobe.com/fr/products/premiere.html">en savoir plus</a>
+                <a href="https://www.adobe.com/fr/products/premiere.html" target="_blank">en savoir plus</a>
             </div>
             <div>
                 <i><img src="Images/Logo3DS.png"></i>
                 <h2>3DSMAX</h2>
                 <p>Modélisation avancée, optimisation, UV unwrapping.</p>
-                <a href="https://www.autodesk.fr/products/3ds-max/">en savoir plus</a>
+                <a href="https://www.autodesk.fr/products/3ds-max/" target="_blank">en savoir plus</a>
             </div>
             <div>
                 <i><img src="Images/LogoBlender.png"></i>
                 <h2>Blender</h2>
                 <p>Modélisation, animation et sculpture 3D, maîtrise des techniques avancées.</p>
-                <a href="https://www.blender.org">en savoir plus</a>
+                <a href="https://www.blender.org" target="_blank">en savoir plus</a>
             </div>
             <div>
                 <i><img src="Images/LogoZbrush.png"></i>
@@ -133,7 +135,7 @@
                 <i><img src="Images/LogoFL.png"></i>
                 <h2>FL Studio</h2>
                 <p>Composition musicale créative, création de sons uniques avec l'utilisation de plugins.</p>
-                <a href="https://www.image-line.com/fl-studio/">en savoir plus</a>
+                <a href="https://www.image-line.com/fl-studio/" target="_blank">en savoir plus</a>
             </div>
         </div>
     </div>
@@ -192,6 +194,19 @@
         document.getElementById(tabname).classList.add("active-tab")
     }
 
+</script>
+
+<script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0px";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+        
 </script>
 
 </body>

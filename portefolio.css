@@ -73,8 +73,7 @@ nav ul li a:hover::after {
     margin: 0 10px;
     cursor: pointer;
     border-radius: 10px;
- 
-    
+   
 }
 .filter-button:focus {
     background-color: #458560;
@@ -86,7 +85,8 @@ nav ul li a:hover::after {
     overflow: hidden;
     display: none;
     border-radius: 10px;
-    border: 2px solid #242424; 
+    border: 2px solid #242424;
+    transition: height 0.5s; 
 }
 
 .layer {
@@ -117,13 +117,14 @@ nav ul li a:hover::after {
     object-fit: contain;
     width: 100%;
     height: auto;
+    transition: transform 0.5s;
 }
 .box:hover img {
     transform: scale(1.1);
 }
 
 .box:hover .layer {
-height: 100%;
+    height: 100%;
 }
 
 .show{
@@ -135,7 +136,8 @@ height: 100%;
 }
 
 .layer h3{
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 250;
     margin-bottom: 20px;
 }
 
@@ -150,4 +152,67 @@ height: 100%;
     height: 60px;
     border-radius: 50px;
     text-align: center;
+}
+/*---------- css for small screens --------*/
+nav .fas{
+    display: none;
+}
+
+
+@media only screen and (max-width:600px){
+    
+    .header-text {
+        margin-top: 10%;
+        font-size: 30px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav {
+        background-color: #00000000;
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+  
+    nav ul{
+        background: #458560;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top:50px;
+        z-index:2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+
+
+    .show{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vh;
+        height: 200px;
+    }
+
+    .filter-button{
+        padding: 11px 5px;
+        margin: 0 8px;
+    }
+
 }
