@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puig Romain Portefolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    
+
+    <script src="https://kit.fontawesome.com/d4f025be9d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Portefolio.html">Portefolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Puig Romain</p>
+                <h1>Bonjour, <br>Et bienvenue sur mon <span>Portefolio</span></h1>
+            </div>
+        </div>
+    </div>
+<!----------------About---------------------->
+
+    <div id="about">
+        <div class="container">
+                <div class="row">
+                        <div class="about-col-1">
+                                <img src="Images/Moi.png">
+                        </div>
+                        <div class="about-col-2">
+                                <h1 class="sub-title">A propos de moi</h1>
+                                <p>Bonjour, je m'appelle Romain et j'ai 22 ans. J'ai étudié dans les domaines du design et de la création. 
+                                    J'essaie d'utiliser toutes mes connaissances acquises pour apprendre davantage. 
+
+                                    Actuellement en emploi à mi-temps et en formation en ligne sur le développement en Java. 
+                                    Je suis à la recherche d’un master pour continuer mon cursus scolaire.</p>
+                        <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Compétences</p>
+                                <p class="tab-links" onclick="opentab('cursus')">Cursus Scolaire</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experiences professionels</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Dévelopeur Jeux vidéo</span><br>Dévelopement du jeu (Gameplay, UI, etc...), création de shader, et intégration<br><lieu>Unity (C#) - UnrealEngine (Blueprint - C++)</lieu></li>
+                                <li><span>Modélisation 3D</span><br>Modélisation de modèle 3D et sculpt <br><lieu>3DSMAX - Blender - Zbrush</lieu><br>
+                                    Création de matériaux et leurs application <br><lieu>SubtanceDesigner - SubtancePainter - Mixer</lieu></li>
+                                <li><span>Illustration</span><br>Illustration traditionnel et digital<br><lieu>Photoshop - Krita</lieu></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="cursus">
+                            <ul>
+                                <li><span>2019</span><br>BAC STI2D option ITEC et (Art et métier du design)<br><lieu>St Aubin la salle (49)</lieu></li>
+                                <li><span>2019-2023</span><br>License jeux vidéo et médias interactifs<br><lieu>L3DI UCO Laval (53)</lieu></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>STAGES DÉCOUVERTES</span><br>Stage informatique (découverte outil de programmation web et structure 
+                                    d'une entreprise )<br><lieu>MonagraphiC (2015 mozé -sur- louet 49)</lieu><br> Stage en Atelier (découverte de gestion de projet et d'équipe)
+                                    <br><lieu>RMA (2019 Rochefort-sur-loire 49)</lieu></li>
+                                <li><span>DRIVE ET POISSONERIE</span><br> Renfort de 4 jours pendant les fêtes de fin d'Années (poissonnerie : emballage et mise en rayon et aide dans d'autres secteurs)
+                                    <br><lieu>Décembre (2019-2020-2021-2022)</lieu><br> Travail au Drive (picking, dispatching...)<br><lieu>(2023-2024)</lieu><br><lieu>HYPER U (Mûrs érigné 49)</lieu></li>
+                                
+                            </ul>
+                        </div>
+                </div>
+        </div>
+
+<!---------------Logiciel----------------->
+<div id="logiciel">
+    <div class="container">
+        <h1 class="sub-title">Logiciels</h1>
+        <div class="logiciel-lists">
+            <div>
+                <i><img src="Images/LogoUnity.png"></i>
+                <h2>Unity</h2>
+                <p>Programmation en C# pour la création de l'architecture du jeu. intégration 3D, création de shader.</p>
+                    <a href="https://unity.com">en savoir plus</a>
+            </div>
+            <div>
+                <i><img src="Images/LogoUnreal.png"></i>
+                <h2>Unreal</h2>
+                <p>Utilisation de blueprint pour l'architecture du jeu. Intégration 3D, création de shader, UI/UX.</p>
+                <a href="https://www.unrealengine.com/fr">en savoir plus</a>
+            </div>
+            <div>
+                <i><img src="Images/LogoPhotoshop.png"></i>
+                <h2>Photoshop</h2>
+                <p>Édition d'image et retouche avec des outils puissants. Illustration et création visuelle. </p>
+                <a href="https://www.adobe.com/fr/products/photoshop.html">en savoir plus</a>
+            </div>
+            <div>
+                <i><img src="Images/LogoPremier.png"></i>
+                <h2>PremièrePro</h2>
+                <p>Montage vidéo avancé, transitions fluides, intégration d'effets After Effects. </p>
+                <a href="https://www.adobe.com/fr/products/premiere.html">en savoir plus</a>
+            </div>
+            <div>
+                <i><img src="Images/Logo3DS.png"></i>
+                <h2>3DSMAX</h2>
+                <p>Modélisation avancée, optimisation, UV unwrapping.</p>
+                <a href="https://www.autodesk.fr/products/3ds-max/">en savoir plus</a>
+            </div>
+            <div>
+                <i><img src="Images/LogoBlender.png"></i>
+                <h2>Blender</h2>
+                <p>Modélisation, animation et sculpture 3D, maîtrise des techniques avancées.</p>
+                <a href="https://www.blender.org">en savoir plus</a>
+            </div>
+            <div>
+                <i><img src="Images/LogoZbrush.png"></i>
+                <h2>Zbrush</h2>
+                <p>Compétence en sculpture numérique 3D, modéliser des détails complexes et des textures réalistes.</p>
+                <a href="https://www.maxon.net/fr/zbrush">en savoir plus</a>
+            </div>
+            <div>
+                <i><img src="Images/LogoFL.png"></i>
+                <h2>FL Studio</h2>
+                <p>Composition musicale créative, création de sons uniques avec l'utilisation de plugins.</p>
+                <a href="https://www.image-line.com/fl-studio/">en savoir plus</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------Projets-------------->
+<div id="projet">
+    <div class="container">
+        <h1 class="sub-title">Projets</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="Images/HackNSlash500.png">
+                <div class="layer">
+                    <h3>Projet A</h3>
+                    <p>Création d'un hack'n'slash sur UnrealEngine</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/HandleWithCare500.png">
+                <div class="layer">
+                    <h3>Handle With Care</h3>
+                    <p>Jeu issue de la emotionnal GameJam</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/projet3D500.png">
+                <div class="layer">
+                    <h3>Scène 3D</h3>
+                    <p>Scène sous unreal pour y tester plusieurs outils</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="Portefolio.html"class="btn">Voir Plus</a>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+</body>
+
+</html>

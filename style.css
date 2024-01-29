@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Autres styles communs à toutes les pages */
+#header {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}

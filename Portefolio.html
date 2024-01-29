@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PorteFolio - Puig Romain Portefolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portefolio.css">
+
+    <script src="https://kit.fontawesome.com/d4f025be9d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="presentation-page">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Portefolio.html">Portefolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+            </div>
+        </div>
+    </div>
+    <div id="buttons" class="container">
+        <button class="filter-button" onclick="filterObjects('all')"><h3>Show All</h3></button>
+        <button class="filter-button" onclick="filterObjects('unreal')"><h3>UnrealEngine</h3></button>
+        <button class="filter-button" onclick="filterObjects('unity')"><h3>Unity</h3></button>
+        <button class="filter-button" onclick="filterObjects('3d')"><h3>Projet3D</h3></button>
+         <button class="filter-button" onclick="filterObjects('autre')"><h3>Autres</h3></button>
+    </div>
+
+    <div class="box unreal">
+        <div class="cadre">
+            <img src="Images/HackNSlash.png">
+        </div>
+        <div class="layer">
+            <h3>Projet A</h3>
+            <p>Création d'un hack'n'slash sur UnrealEngine</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+        </div>
+    </div>
+    <div class="box unreal">
+        <div class="cadre">
+            <img src="Images/HandleWithCare.png">
+        </div>
+        <div class="layer">
+            <h3>Handle With Care</h3>
+            <p>Jeu issue de la emotionnal GameJam</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+        </div>
+    </div>
+    <div class="box autre">
+        <div class="cadre">
+            <img src="Images/Sousriz.png">
+        </div>
+        <div class="layer">
+            <h3>Sous riz !</h3>
+            <p>Création en 12h d'un jeu sur Construct 3</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+        </div>
+    </div>
+    <div class="box 3d">
+        <div class="cadre">
+            <img src="Images/projet3D.jpg">
+        </div>
+        <div class="layer">
+            <h3>Scène 3D</h3>
+            <p>Scène sous unreal pour y tester plusieurs outils</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+        </div>
+    </div>
+    <div class="box unity">
+        <div class="cadre">
+            <img src="Images/RogueLike.png">
+        </div>
+        <div class="layer">
+            <h3>Projet Rogue Like</h3>
+            <p>Projet pour apprendre à construire la base d'un rogue like</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+        </div>
+    </div>
+    <div class="box unreal">
+        <div class="cadre">
+            <img src="Images/PartyGame.png">
+        </div>
+        <div class="layer">
+            <h3>Party Game</h3>
+            <p>Projet de création d'un partygame multiplayer sur Unreal 4.27</p>
+            <a href="#"><i class="fa-solid fa-link"></i></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>

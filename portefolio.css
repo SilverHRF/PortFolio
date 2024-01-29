@@ -1,0 +1,153 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #000000;
+    color: #ffffff;
+}
+body.presentation-page {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/Fond_PortFolio.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.container {
+    padding: 10px 10%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #0000007a; /* Couleur de fond de la barre de navigation */
+    padding: 10px 0;
+}
+.logo {
+    width: 250px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #73e696;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #458560;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/*--------------------------bouton et filtres de projet trop sympa genre cool si tu lis ça c'est vraiment que tu es un voyeur------------------------*/
+.objects{
+    width: 100%;
+    height:0;
+}
+#filterButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.filter-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+ 
+    
+}
+.filter-button:focus {
+    background-color: #458560;
+}
+.box{
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    overflow: hidden;
+    display: none;
+    border-radius: 10px;
+    border: 2px solid #242424; 
+}
+
+.layer {
+    width: 100%;
+    height:0;
+    background: linear-gradient(rgba(0,0,0,0.5), #458560);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.cadre{
+    width: 100%;
+    height: 200px;
+}
+
+.box img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+.box:hover img {
+    transform: scale(1.1);
+}
+
+.box:hover .layer {
+height: 100%;
+}
+
+.show{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120vh;
+    height: 200px;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #458560;
+    text-decoration:none ;
+    font-size: 18px;
+    line-height: 60px;
+    background:#fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+}
