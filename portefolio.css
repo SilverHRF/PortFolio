@@ -206,13 +206,17 @@ nav .fas{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 60vh;
-        height: 200px;
+        width: 40vh;
+        height: 105px;
     }
 
     .filter-button{
-        padding: 11px 5px;
-        margin: 0 8px;
+        padding: 10px 4px;
+        margin: 0 2px;
+        
     }
 
+    .filter-button h4 {
+        font-size: 12px;
+    }
 }
