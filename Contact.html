@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PorteFolio - Puig Romain Portefolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Contact.css">
+
+    <script src="https://kit.fontawesome.com/d4f025be9d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="presentation-page">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Portefolio.html">Portefolio</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <i class="fas fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Mes réseaux</h1>
+            <div class="contact-lists">
+                <div>
+                    <i><img src="Images/LogoMail.png"></i>
+                    <h2>Mail</h2>
+                    <p>puig.romain49@gmail.com</p>
+                        <a href="mailto:puig.romain49@gmail.com" target="_blank" >en savoir plus</a>
+                </div>
+                <div>
+                    <i><img src="Images/LogoArtStation.png"></i>
+                    <h2>ArtStation</h2>
+                    <p>Lien vers mon Artstation</p>
+                    <a href="https://www.artstation.com/silverh" target="_blank">en savoir plus</a>
+                </div>
+                <div>
+                    <i><img src="Images/LogoItch.png"></i>
+                    <h2>Itch.io</h2>
+                    <p>Lien vers mon Itch.io</p>
+                    <a href="https://puigromain.itch.io" target="_blank">en savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0px";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
