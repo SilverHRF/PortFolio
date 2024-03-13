@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PorteFolio - Puig Romain Portefolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script src="https://kit.fontawesome.com/d4f025be9d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="presentation-page body-article8">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Portefolio.html">Portefolio</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <i class="fas fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text"></div>
+        </div>
+    </div>
+
+    <!-- Articles -->
+    <article>
+        <div id="sidebar">
+            <div id="toc">
+                <a href="#title">Follow the Wind</a>
+                <!-- Add more links for other chapters -->
+            </div>
+        </div>
+        <div id="content">
+            <h1 id="title">Follow the Wind</h1>
+
+
+            <div class="chapter" id="chapter1">
+                <h2>Emotionnal Game Jam 2024</h2>
+                <p>Voici un aperçu du projet Follow the Wind issue de l'émotional gamejam de 2024 qui a reçu le prix des meilleurs graphismes.<br><br>
+                    Sur ce projet, nous étions 4 personnes, Michael Gargulio qui s'est occupé de la modélisation de l'environnement et de la végétation.<br>
+                    Gensana Manceau qui était sur la modélisation du train et de ce qui l'entoure et certains bâtiments et la création de L'UI et logo.<br>
+                    Arthur Bouhier sur la création et l'animation des grues, l'intégration de l'environnement et toute la partie shader sur Unreal.<br>
+                    Pour ma part toute partie programmation et soundesign.<br><br>
+
+                    Ce projet n'avait pas pour but d'avoir un réel gameplay, car nous avions peu de connaissance en gamedesign.<br>
+                    On a réussi à créer le visuel que l'on désirait et c'est le principal.<br><br>
+
+                    Lien du Itch pour télécharger le jeu : <a href="https://puigromain.itch.io/follow-the-wind">Lien du jeu</a>
+                </p>
+
+                <div class="image-section">
+                    <div class="image-gallery">
+                        <img src="Images/ArticleImage/FollowWInd/Capture.PNG" onclick="openImageOverlay('Images/ArticleImage/FollowWInd/Capture.PNG')" />
+                        <img src="Images/ArticleImage/FollowWInd/Capture2.PNG" onclick="openImageOverlay('Images/ArticleImage/FollowWInd/Capture2.PNG')" />              
+                        <img src="Images/ArticleImage/FollowWInd/Capture3.PNG" onclick="openImageOverlay('Images/ArticleImage/FollowWInd/Capture3.PNG')" />
+                        <img src="Images/ArticleImage/FollowWInd/Capture4.PNG" onclick="openImageOverlay('Images/ArticleImage/FollowWInd/Capture4.PNG')" />
+                        <img src="Images/ArticleImage/FollowWInd/Capture5.PNG" onclick="openImageOverlay('Images/ArticleImage/FollowWInd/Capture5.PNG')" />
+                        <img src="Images/ArticleImage/FollowWInd/Capture6.PNG" onclick="openImageOverlay('Images/ArticleImage/FollowWInd/Capture6.PNG')" />
+                        <!-- Add more images -->
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Add more chapters and sections as needed -->
+
+        </div>
+    </article>
+
+<!-- Image Overlay -->
+<div class="image-overlay" onclick="closeImageOverlay()">
+    <img id="overlay-image" src="" />
+</div>
+
+<script>
+    function openImageOverlay(src) {
+        document.getElementById('overlay-image').src = src;
+        document.querySelector('.image-overlay').style.display = 'flex';
+    }
+
+    function closeImageOverlay() {
+        document.querySelector('.image-overlay').style.display = 'none';
+    }
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0px";
+    }
+    function closemenu(){
+         sidemenu.style.right = "-200px";
+    }
+</script>
+
+
+</body>
+</html>

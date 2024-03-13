@@ -37,104 +37,121 @@
     <article>
         <div id="sidebar">
             <div id="toc">
-                <a href="#title">Title</a>
-                <a href="#chapter1">Chapter 1</a>
-                <a href="#chapter2">Chapter 2</a>
-                <a href="#chapter3">Chapter 3</a>
+                <a href="#title">Projet Rogue Like Unity</a>
+                <a href="#chapter1">La génération procédurale</a>
+                <a href="#chapter2">Le déplacement</a>
+                <a href="#chapter3">Les sorts</a>
                 <!-- Add more links for other chapters -->
             </div>
         </div>
         <div id="content">
-            <h1 id="title">Article Title</h1>
-            <p id="summary">A brief description in smaller font and different color to summarize the article.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h1 id="title">Projet Rogue Like Unity</h1>
+            <p id="summary">
+                <br>Je vais donc vous présenter mon projet unity sur lequel je me suis lancé pour pouvoir apprendre à créer un gameplay complet, modulaire pour créer des niveaux/items / sorts/monstres… De façon à pouvoir faire un module qui pourra être utilisé pour faire un jeu complet et il suffira juste d’ajouter toute la partie visuelle et sonore !<br><br>
+
+                Voici donc les étapes de mon projet avec des explications simples de comment cela peut être utilisé par un game designer par exemple.<br>
             </p>
 
             <div class="chapter" id="chapter1">
-                <h2>Chapter 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2>La génération procédurale</h2>
+                <p>
+                    Tout d’abord, j’ai dû créer un système procédural pour faire apparaître des niveaux aléatoirement.<br>
+
+                    Pour cela, j’ai utilisé le Depth First Search , qui permet dans une grille de faire un chemin, cela forme un labyrinthe.<br>
+                    
+                    J’y ai donc rajouté par la suite des règles pour pouvoir avoir la main sur l’aléatoire de la création de ce chemin.<br><br>
+                    
+                    Cette grille peut être changer de taille et cela créer un chemin aléatoire<br>
+                </p>
 
                 <div class="image-section">
                     <div class="image-gallery">
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_1.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_1.PNG')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_2.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_2.PNG')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_3.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_3.PNG')" />
                         <!-- Add more images -->
                     </div>
                 </div>
+
+                <p>
+                    Ici, on peut voir la même taille de grille et un chemin différent !<br>
+                    Et je peux par la suite créer les salles comme bon me semble, tant qu’elle reste dans la taille d’une case.<br>
+                </p>
+                
+                <div class="image-section">
+                    <div class="image-gallery">
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_5.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_5.PNG')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_6.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_6.PNG')" />
+                        <!-- Add more images -->
+                    </div>
+                </div>
+                <p>
+                    On peut y changer la taille de la grille.<br>
+
+                    Et dans la partie surlignée , tout d’abord, on peut y renseigner le type de salle, celle présente dans les préfabs du projet.<br>
+                    
+                    Après, on peut y renseigner les positions MIN et MAX dans la grille, et la case obligatory ,c’est pour savoir si la salle en question est prioritaire dans son apparition ou pas.<br><br>
+
+                    Je peux par la suite affiner cet algorithme pour que la taille des salles ne soit plus un problème.<br>
+
+
+                </p>
+
             </div>
 
             <div class="chapter" id="chapter2">
-                <h2>Chapter 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2>Le déplacement</h2>
+                <p>Pour ce projet, j’ai décidé de faire un déplacement avec une caméra top down et le joueur se déplace avec le clique droit !<br>
+                    <br>
+
+                    Pour cela, j’ai utilisé le navMesh , un principe utilisé de base pour le pathfinding , les IA etc…<br>
+
+
+                    Je m’en suis servi pour y faire le déplacement du joueur. Mais pour que cela fonctionne, il faut que les surfaces jouables soient calculées et qu’un bake soit effectué.<br>
+
+                    
+                    Malheureusement comme les niveaux se forment aléatoirement les prébakes ne sont pas possible. Donc un bake est effectué après que le niveau se forme pour que les salles soient liées entre elles.<br>
+                    Le seul inconvénient, il faut un temps d’attente avant de pouvoir se déplacer, cela va augmenter le temps de chargement d’un niveau.<br>
+                </p>
 
                 <div class="image-section">
                     <div class="image-gallery">
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_7.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_7.PNG')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_8.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_8.PNG')" />
                         <!-- Add more images -->
                     </div>
                 </div>
             </div>
 
             <div class="chapter" id="chapter3">
-                <h2>Chapter 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2>Les sorts</h2>
+                <p>Les sorts font partie du gameplay principal, et mon but, c’est de pouvoir en faire une partie customisable par le joueur.<br>
+
+                    Donc, tout d’abord, j’ai fait un visuel pour les sors utilisé par le joueur, le cooldown est donc affiché sur le visuel du sort ce qui est plus compréhensible pour le joueur.<br>
+                    J’ai créé un emplacement pour y stocker ses sorts.<br><br>
+
+                    Et par la suite permettre au joueur de choisir lui-même ses sorts faire un système d’amélioration/personnalisation.<br>
+
+                    La création et customisation de sorts sont déjà en place, cela permet d’en créer une infinité tout en changeant les stats de ceux-ci très facilement !<br>
+                
+                </p>
 
                 <div class="image-section">
                     <div class="image-gallery">
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
-                        <img src="https://via.placeholder.com/200" onclick="openImageOverlay('https://via.placeholder.com/800')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_9.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_9.PNG')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_10.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_10.PNG')" />
+                        <img src="Images/ArticleImage/RogueLike/RogueLike_11.PNG" onclick="openImageOverlay('Images/ArticleImage/RogueLike/RogueLike_11.PNG')" />
+
                         <!-- Add more images -->
                     </div>
                 </div>
             </div>
+            <p>
+                Voilà pour l’instant ce qui a été fait sur ce projet<br><br>
 
+                Plein de choses reste à faire, ce n’est que le début de celui-ci !
+
+            </p>
             <!-- Add more chapters and sections as needed -->
 
         </div>

@@ -20,17 +20,17 @@ body.presentation-page {
 .body-article1{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/HackNSlash.png);
+    background-image: url(Images/HackNSlash_Article.png);
 } 
 .body-article2{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/HandleWithCare.png);
+    background-image: url(Images/HandleWithCare_Article.png);
 } 
 .body-article3{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/Sousriz.png);
+    background-image: url(Images/Sousriz_Article.png);
 }
 .body-article4{
     width: 100%;
@@ -40,12 +40,22 @@ body.presentation-page {
 .body-article5{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/RogueLike.png);
+    background-image: url(Images/RogueLike_Article.png);
 }
 .body-article6{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/PartyGame.png);
+    background-image: url(Images/PartyGame_Article.png);
+}
+.body-article7{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/Mitsubishi_Article.png);
+}
+.body-article8{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/FollowTheWind_Article.png);
 }
 
 .container {
@@ -102,7 +112,7 @@ article {
     transform: translateY(-50%); /* Ajustez pour le centrage vertical */
     left: 0;
     background: #333;
-    padding: 100px;
+    padding: 150px;
     overflow-y: auto;
     color: #fff;
     z-index: 1;
@@ -117,12 +127,18 @@ article {
 
 #content h1 {
     color: #73e696;
+    font-size: 52px
 }
 
 #content p {
     font-size: 16px;
     color: #ccc;
 }
+
+#summary{
+    margin-bottom: 200px;
+}
+
 
 .chapter {
     margin-top: 30px;
@@ -273,7 +289,15 @@ nav .fas{
     }
 
     .image-gallery img {
-        margin-right: 0; /* Retirez la marge à droite pour empêcher le débordement */
-        margin-bottom: 10px; /* Ajoutez une marge en bas pour espacer les images */
+        max-width: 100%; /* Ajuste la largeur en fonction du ratio original de l'image */
+        max-height: 200px; /* Hauteur maximale pour la galerie */
+        margin-right: 10px;
+        cursor: pointer;
     }
+    .image-overlay img {
+        max-width: 100%; /* Ajuste la largeur en fonction du ratio original de l'image */
+        max-height: 800px; /* Hauteur maximale pour l'affichage en grand */
+    }
+
+
 }
