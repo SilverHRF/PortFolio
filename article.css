@@ -57,6 +57,11 @@ body.presentation-page {
     height: 100vh;
     background-image: url(Images/FollowTheWind_Article.png);
 }
+.body-article9 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/SwampTactics_Article.png);
+}
 
 .container {
     padding: 10px 10%;

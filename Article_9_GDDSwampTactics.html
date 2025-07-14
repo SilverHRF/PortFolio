@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+        article {
+            margin: 20px 0 !important;
+            max-width: none !important;
+            width: 100%;
+        }
+
+        #content {
+            margin-left: 25% !important; 
+            max-width: 1000px; 
+            margin-right: auto;
+            margin-left: 25%; 
+        }
+
+        @media only screen and (max-width:1200px) {
+            #content {
+                margin-left: 28% !important; 
+            }
+        }
+
+        @media only screen and (max-width:900px) {
+            #content {
+                margin-left: 32% !important; 
+            }
+        }
+        
+        @media only screen and (max-width:600px){
+            #content {
+                margin-left: 0 !important; 
+                max-width: 100% !important;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PorteFolio - Puig Romain Portefolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script src="https://kit.fontawesome.com/d4f025be9d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="presentation-page body-article9">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Portefolio.html">Portefolio</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <i class="fas fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text"></div>
+        </div>
+    </div>
+
+    <article>
+        <div id="sidebar">
+            <div id="toc">
+                <a href="#introduction">Introduction</a>
+                <a href="#game-universe">Univers du Jeu</a>
+                <a href="#resources-main-loop">Ressources et Boucle Principale</a>
+                <a href="#progression-replayability">Progression et Rejouabilité</a>
+                <a href="#appendices">Annexes et Références</a>
+            </div>
+        </div>
+        <div id="content">
+            <h1 id="title">Game Design Document - Swamp Tactics (Nom provisoire)</h1>
+            <p id="summary">
+                Ce GDD est un projet que j'ai commencé fin juin 2025, avec un prototypage début juillet 2025. Le but est de créer un projet qui ne demande pas énormément de temps, mais qui procure beaucoup de plaisir à le mettre en place et à en façonner le gameplay.
+            </p>
+            <p>Je vais vous présenter le GDD actuel du projet (qui est bien sûr voué à évoluer).</p>
+
+
+            <div class="chapter" id="introduction">
+                <h2>Introduction</h2>
+                <br>
+                <p>
+                    Ce projet est un auto-battler solo, développé sur Unreal Engine 4.27, dans un univers 2D. Le joueur doit constituer une armée de petites créatures des marais et de plantes, puis de les améliorer pour affronter des vagues d'ennemis lors de combats au tour par tour.
+                </p>
+                <p>
+                    Ce jeu est axé sur la stratégie adaptative. Avant chaque affrontement, vous recrutez de nouvelles unités, les améliorez et les placez de manière réfléchie sur le champ de bataille, vous forçant à ajuster constamment vos tactiques en fonction des défis.
+                </p>
+                <p>
+                    La gestion de l'économie est cruciale : le Nectar, la monnaie du jeu, vous permet d'acheter de quoi renforcer vos troupes, comme des plantes aux effets passifs etc… Cette monnaie à aussi des intérêts, c’est au joueur de l’utiliser de façon méticuleuse.
+                </p>
+                <p>
+                    Un système de progression et d'objectifs vous accompagnera. Une fois la quête principale terminée, vous pourrez débloquer un mode sans fin et relever des défis ardus, qui vous permettront d'acquérir de nouveaux outils pour vos futures parties, enrichissant ainsi chaque nouvelle tentative.
+                </p>
+            </div>
+
+            <div class="chapter" id="game-universe">
+                <h2>Univers du jeu</h2>
+                <p>
+                    Alors, pour ce qui est de l'univers de Swamp Tactics, imaginez un marais avec des petites créatures avec chacune des classes comme dans un Donjons & Dragons.<br>
+                </p>
+                <br>
+                <h3>Les Créatures du Marais (Vos Unités) (NOTE possibilité de changer) :</h3>
+                <p>
+                    Nos unités, ce sont des créatures du marais, des animaux amphibiens ou reptiles.
+                </p>
+
+                <h5>Exemples de Races Possibles :</h5>
+                <ul>
+                    <br>
+                    Axolotl : Unités résistances et qui est spécialisé dans le soin et la régénération.
+                    <br>
+                    Grenouille : Les grenouilles, elles, sont des unités rapides et qui peuvent faire usage du poison.
+                    <br>
+                    Tortue : Des unités lentes mais qui dispose de beaucoup de pv et la possibilité de se protéger avec un bouclier.
+                    <br>
+
+                    Serpent : Les serpents sont rapides et jouent autour du poison.
+                    <br>
+
+                    Triton : Les tritons, eux, sont axés sur l'invocation. Ils peuvent appeler des petites créatures.
+                    <br>
+
+                    Salamandre : Enfin, les salamandres sont axées sur la régénération et le feu.
+                    <br>
+                    <br>
+                    <br>
+                </ul>
+
+                <h3>Les Insectes (Vos Ennemis) :</h3>
+                <p>
+                    Face à nous, on a tout un tas d'insectes présent dans plusieurs zones.
+                </p>
+
+                <h5>Exemples d'Ennemis :</h5>
+                <ul>
+                    <br>
+                    Moustique : Rapide, draine votre vie.
+                    <br>
+                    Libellule : Rapide, focus vos unités présent sur la backlane.
+                    <br>
+                    Scorpion : Lui, il fait de gros dégâts et empoisonne.
+                    <br>
+                    Coléoptère : Possède de l’armure.
+                    <br>
+                    Araignée : Elle vous ralentit ou vous bloque le chemin.
+                    <br>
+                    Sauterelle : Elle peut vous faire des dégâts de zone.
+                    <br>
+                </ul>
+            </div>
+
+            <div class="chapter" id="resources-main-loop">
+                <h2>Ressources et Boucle Principale</h2>
+                <br>
+
+                <h3>Le Nectar, monnaie principale</h3>
+                <p>
+                    Le Nectar. On le gagne après chaque combat, et il nous permet d'acheter de nouvelles unités, des plantes, des mutations et des mods au shop. On peut même l'utiliser pour renouveler le shop. Un petit système d'intérêt qui vous offre le choix d’en garder de côté !
+                </p>
+                <br>
+                <h3>Le Shop</h3>
+                <p>
+                    Le shop, c'est là où on vient renforcer notre équipe à chaque tour. On y trouve des unités, des mods, parfois des mutations et des plantes. Les offres s'adaptent un peu à ce que vous avez déjà pour faciliter les fusions. Pour acheter, c'est simple, si vous avez assez de Nectar. Si votre banc est plein, le jeu vous demandera de faire de la place. Et si rien ne vous plaît, un "reroll" vous donne de nouvelles propositions.
+                </p>
+                <br>
+                <h3>Le Banc</h3>
+                <p>
+                    Le banc, c'est là où vos unités et plantes sont stockées. C'est ici que les fusions se font automatiquement : trois unités identiques créent une unité de niveau supérieur. On peut aussi vendre des unités pour récupérer du Nectar. Vos unités profitent aussi d'effets passifs en restant sur le banc. Après un combat, les survivants reviennent sur le banc, et leurs points de vie sont remis à zéro.
+                </p>
+                <br>
+                <h3>Le Placement avant le Combat</h3>
+                <p>
+                    Avant chaque bataille, vous placez vos unités sur une grille de 2x4 cases. Vous connaissez à l’avance ce que vous affronter ce qui permet d’ajuster votre placement.
+                </p>
+                <br>
+                <h3>Le Combat Tour par Tour</h3>
+                <p>
+                    Une fois vos unités placées, le combat se déroule automatiquement. Les effets de vos plantes se déclenchent, puis chaque unité agit à son tour selon son initiative. Elles attaquent ou utilisent leurs capacités, et ça peut déclencher d'autres effets. À la fin du combat, si vous avez gagné, vos unités survivantes reviennent sur le banc, leurs PV sont réinitialisés, et vous recevez des récompenses.
+                </p>
+                <br>
+            </div>
+
+            <div class="chapter" id="progression-replayability">
+                <h2>Progression et Rejouabilité</h2>
+                <br>
+                <h3>Le Mode Campagne (notre Quête Principale)</h3>
+                <p>
+                    Le mode Campagne, c'est l'aventure principale. Chaque zone se termine par des combats de boss. La quête se termine quand on bat le boss final de la dernière zone. En battant les boss, on gagne des artefacts qui permettent d’améliorer la fin de notre run.
+                </p>
+                <br>
+                <h3>Le Mode Sans Fin</h3>
+                <p>
+                    Débloqué après la campagne, ce mode vous permet de jouer à l'infini. La difficulté augmente sans cesse, avec des ennemis plus forts et des modificateurs de combat uniques.
+                </p>
+                <br>
+                <h3>Ce qu'on débloque en jouant bien</h3>
+                <p>
+                    En battant les boss de campagne, et en jouant dans le Mode Sans Fin, vous gagnez de nouvelles options pour vos futures parties (mutations, plantes, races d'unités).
+                </p>
+                <br>
+                <h3>Le Livre de Collection</h3>
+                <p>
+                    C'est un registre qui se remplit au fur et à mesure que vous découvrez des éléments du jeu : unités (à chaque niveau de fusion), plantes, mutations, artefacts. C'est l'objectif parfait pour les complétionnistes !
+                </p>
+                <br>
+            </div>
+
+            <div class="chapter" id="appendices">
+                <h2>Annexes et Références</h2><br>
+                <p>Voici mes références, des artistes que je suis et qui m'inspirent pour créer le style visuel du jeu :</p><br>
+                <h3>Grandes sources d'inspiration pour l'univers global :</h3>
+                <ul>
+                    <a href="https://x.com/Taplaos" target="_blank">Taplaos sur X (anciennement Twitter)</a><br><br>
+                </ul>
+                <h3>Autres sources d'inspiration, plus au niveau des unités :</h3>
+                <ul>
+                    <a href="https://x.com/stefscribbles" target="_blank">Stefscribbles sur X (anciennement Twitter)</a><br>
+                    <a href="https://x.com/usalupa" target="_blank">Usalupa sur X (anciennement Twitter)</a><br>
+                    <a href="https://x.com/pigeoncrafts" target="_blank">Pigeoncrafts sur X (anciennement Twitter)</a><br><br>
+                </ul>
+
+                <div class="sub-chapter" id="current-proto">
+                    <h3>Proto Actuel</h3>
+                    <p>Découvrez ci-dessous une vidéo du prototype actuel du jeu, commencé le 4 juillet 2025 et filmé le 14 juillet 2025 :</p>
+                    <div class="image-section">
+                        <div class="image-gallery">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yU5WkqvGCLk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>Dans cette vidéo, je vous montre la boucle de gameplay principale que j'ai réussi à mettre en place :</p>
+                    <ul>
+                        Le Shop où l'on peut acheter ses unités.<br>
+                        Le placement où l'on met ses unités sur la grille.<br>
+                        Le combat, où chaque unité attaque à son tour avec un ciblage par rapport à sa position.<br>
+                        La fin de combat, puis le retour au shop.<br>
+                    </ul>
+                    <p>C'est seulement un prototype en phase de débogage, mais ça avance bien !</p>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <div class="image-overlay" onclick="closeImageOverlay()">
+        <img id="overlay-image" src="" />
+    </div>
+
+    <script>
+        function openImageOverlay(src) {
+            document.getElementById('overlay-image').src = src;
+            document.querySelector('.image-overlay').style.display = 'flex';
+        }
+
+        function closeImageOverlay() {
+            document.querySelector('.image-overlay').style.display = 'none';
+        }
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0px";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+
+</body>
+
+</html>
