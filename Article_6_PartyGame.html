@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 
 <head>
     <style>
@@ -47,7 +47,8 @@
         </div>
         <div id="content">
             <h1 id="title">Projet Party Game Unreal 4.27</h1>
-            <p id="summary"><br>Bonjour ! Et voici l’article de mon projet de Party Game sur Unreal 4<br>
+            <p id="summary">
+                <br>Bonjour ! Et voici l’article de mon projet de Party Game sur Unreal 4<br>
                 Bonne lecture !<br><br>
                 Je vais donc vous présenter ce projet sur lequel j'ai travaillé et qui m’a permis d’apprendre beaucoup de choses.<br>
                 Avant de me lancer dans les explications de ce que j’ai fait, je vais vous expliquer comment j’ai eu l’idée de me lancer dans ce projet.
@@ -55,65 +56,70 @@
 
             <div class="chapter" id="chapter1">
                 <h2>La base</h2>
-                <p>Je suis actuellement étudiant, et au cours de ma deuxième année de licence , j’ai découvert le puissant outil d’unreal : les blueprints.<br>
+                <p>
+                    Je suis actuellement étudiant, et au cours de ma deuxième année de licence , j’ai découvert le puissant outil d’unreal : les blueprints.<br>
 
                     Un moyen très rapide de mettre en place du gameplay , avec beaucoup de facilité, tout ça de manière efficace !<br>
-                    
+
                     Dès lors que je maîtrisais l’outil, je me suis dit, que c’était très simple pour moi de créer des jeux, juste des maquettes en quelques heures.<br>
-                    
+
                     J’ai pour habitude de beaucoup jouer avec des amis, et que des fois, arrive soudainement des réflexions de gameplay fun et rapide qui pourrait se faire.<br>
-                    
+
                     Souvent, ces idées restent que quelques minutes puis disparaisses .<br>
-                    
+
                     Donc je me suis dit pourquoi pas faire un jeu, qui regroupe toutes ces idées, tout ça en multijoueurs en ligne.(Pour pouvoir jouer avec mes amis à l’autre bout de la france)<br>
-                    
+
                     Et pour cela, je devais avoir une base de jeu, avec différents gameplay, pour pouvoir présenter l’idée à mes potes pour que par la suite, on puisse y rajouter des jeux dessus.<br>
-                    
-                    Tout comme ces Mario Party, ces party games , mais cette fois-ci un jeu à nous, facile d’accès et gratuit (pas de serveur à payer, etc…)</p>
+
+                    Tout comme ces Mario Party, ces party games , mais cette fois-ci un jeu à nous, facile d’accès et gratuit (pas de serveur à payer, etc…)
+                </p>
 
 
             </div>
 
             <div class="chapter" id="chapter2">
                 <h2>Le commencement</h2>
-                <p>Je devais donc trouver une solution pour me permettre de jouer avec mon ami qui habite à 800 km, tout ça sans passer par des systèmes payants de serveur.<br><br>
+                <p>
+                    Je devais donc trouver une solution pour me permettre de jouer avec mon ami qui habite à 800 km, tout ça sans passer par des systèmes payants de serveur.<br><br>
 
                     Et c’est là que Steam Advanced Session arrive !<br><br>
-                    
+
                     C'est un plugin qui fonctionne très simplement.<br>
-                    
+
                     Normalement, dans tout système multijoueur , des joueurs pour jouer ensemble doivent se connecter tous sur le même serveur.L’utilisation du Steam Advanced Session nous permet d’avoir accès aux informations steam du joueur , et pouvoir lui attribuer un pseudo et une image de profil !
 
                     Cela par la suite nous permet aussi d’avoir accès à la liste d’amis du joueur et d’envoyer des invitations.
-                    
+
                     Lorsqu’on appuie sur le bouton jouer, on arrive sur une interface.
-                    
+
                     Le serveur, c’est une machine qui permet de mettre en relation tous les joueurs et pouvoir y faire de l’échange d’informations.<br>
-                    
+
                     Un serveur, dans le cas où j’en louerais le service, serait disponible h24 , avec une qualité qui resterais linéaire et peu de problèmes dans le cadre de la fluidité des informations d’une partie.<br><br>
-                    
+
                     Or, dans mon cas, je ne voulais pas utiliser ce service, car le but était de pouvoir faire du multijoueur sans serveur.<br>
-                    
+
                     J’ai donc utilisé le Steam Advanced Session ! Qui permet à un joueur de faire office de serveur, avec le principe de Hosting .<br>
-                    
+
                     Sa machine, donc sa connexion va donc faire office de serveur. La stabilité de la partie va donc dépendre de la connexion du host et comme ce n’est pas une machine qui tourne h24 , il suffit que le host ce déconnecte pour que la partie soit interrompue.<br><br>
-                    
+
                     Autre inconvénient<br>
-                    
+
                     Si j’avais voulu créer quelconque système de progression, malheureusement le stockage de ces informations se ferait sur la machine des joueurs et non sur un serveur stocké et vérifié. Donc de la triche aurait pu être possible. Ou même si un joueur change de machine, il ne peut malheureusement pas récupérer sa progression précédente.<br>
-                    
+
                     Mais peut-être que par la suite, j’intégrerais un serveur seulement pour y stocker la progression des joueurs et permettre un feature quand même sympathique. Cela n’est pas la priorité !<br><br>
-                    
-                    Maintenant, parlons un peu de comment ce présente mon menu, et comment les joueurs peuvent créer leurs parties !</p>
+
+                    Maintenant, parlons un peu de comment ce présente mon menu, et comment les joueurs peuvent créer leurs parties !
+                </p>
 
             </div>
 
             <div class="chapter" id="chapter3">
                 <h2>Le menu et création de partie !</h2>
-                <p>L’utilisation du Steam Advanced Session nous permet d’avoir accès aux informations steam du joueur , et pouvoir lui attribuer un pseudo et une image de profil !<br>
+                <p>
+                    L’utilisation du Steam Advanced Session nous permet d’avoir accès aux informations steam du joueur , et pouvoir lui attribuer un pseudo et une image de profil !<br>
 
                     Cela par la suite nous permet aussi d’avoir accès à la liste d’amis du joueur et d’envoyer des invitations.<br><br>
-                    
+
                     Lorsqu’on appuie sur le bouton jouer, on arrive sur une interface.<br>
 
                     Le joueur arrivera sur le menu des serveurs et va pouvoir soit créer son serveur avec un boutton mis à disposition où rejoindre une existant avec une liste affiché sur son écran<br>
@@ -121,17 +127,17 @@
                     Il peut choisir le nom du serveur, le nombre de joueurs qui peuvent y rentrer et savoir quelle méthode utiliser pour le host.<br>
 
                     Sans rentrer dans les détails, le joueur peut se connecter soit en Internet soit en LAN.<br>
-                    
+
                     Lorsque le joueur créé une session ou rejoins une session, il va arriver sur ce menu.Petit post pour vous parler de ce petit projet créé lors d’un workshop de 3 jours.
 
                     Lors de ce workshop nous avons appris à utiliser le logiciel construct 3 , qui permet de rapidement prototyper et créer un jeu très rapide dans le contexte de Jam en quelques heures.
-                    
+
                     Dans le cadre de ce workshop , avec mon collègue Steven Favre , nous avons réaliser ce jeu en 12H intitulé “Sous riz” , le thème pour cette Jam était “souris”.
-                    
+
                     Le but du jeu ? Très simple ! Simplement manger et détruire toute la table sans finir sour le bol de riz ou tomber de la table , objectif faire le meilleur score en un temps imparti
-                    
+
                     Voici le lien pour tester le jeu :
-                    
+
                     Les boutons vont être différents si il est un simple client ou bien le host.<br><br>
 
                     Le host va pouvoir changer plusieurs choses dans ce menu :<br>
@@ -210,7 +216,7 @@
                     Pour pouvoir détecter les balles et appliquer les dégâts, j’aurais pu garder la collision de base du character de Unreal !<br><br>
 
                     J’ai donc créer une collision personnalisée, et cela me permet par la suite de choisir le montant des dégâts localisé<br>
-                    
+
                     Avec ça, il ne me restait qu’à créer un système de munitions et de vie des joueurs !<br><br>
                     Dès lors que le joueur n’as plus de balle celui-ci doit recharger (animation qui permet aux autres joueurs que celui-ci recharge)<br>
 
@@ -229,7 +235,7 @@
                     Maintenant, que le déplacement et le tir sont faits ! Il ne reste que la capture de drapeau !<br><br>
 
                     Pour cela, j’ai créer des règles simples !<br>
-                    
+
                     Un joueur bleu peut récupérer le drapeau rouge, dans la base rouge.<br>
                     Dès lors que le joueur récupère le drapeau, il l’a sur son dos et des particules apparaisses autour de lui !<br>
                     Son objectif le ramenait à sa base pour mettre le point !<br>
@@ -275,34 +281,34 @@
 
         </div>
 
-        
+
     </article>
 
-<!-- Image Overlay -->
-<div class="image-overlay" onclick="closeImageOverlay()">
-    <img id="overlay-image" src="" />
-</div>
+    <!-- Image Overlay -->
+    <div class="image-overlay" onclick="closeImageOverlay()">
+        <img id="overlay-image" src="" />
+    </div>
 
-<script>
-    function openImageOverlay(src) {
-        document.getElementById('overlay-image').src = src;
-        document.querySelector('.image-overlay').style.display = 'flex';
-    }
+    <script>
+        function openImageOverlay(src) {
+            document.getElementById('overlay-image').src = src;
+            document.querySelector('.image-overlay').style.display = 'flex';
+        }
 
-    function closeImageOverlay() {
-        document.querySelector('.image-overlay').style.display = 'none';
-    }
+        function closeImageOverlay() {
+            document.querySelector('.image-overlay').style.display = 'none';
+        }
 
-    var sidemenu = document.getElementById("sidemenu");
+        var sidemenu = document.getElementById("sidemenu");
 
-    function openmenu(){
-        sidemenu.style.right = "0px";
-    }
+        function openmenu() {
+            sidemenu.style.right = "0px";
+        }
 
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
 
 
 </body>

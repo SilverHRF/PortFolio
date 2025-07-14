@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+        /* Styles de base de l'article fournis par l'utilisateur */
+        article {
+            margin: 20px 0 !important;
+            max-width: none !important;
+            width: 100%;
+        }
+
+        #content {
+            margin-left: 25% !important;
+            max-width: 1000px;
+            margin-right: auto;
+            /* margin-left: 25%; <- Dupliqué, le premier est suffisant avec !important */
+        }
+
+        @media only screen and (max-width:1200px) {
+            #content {
+                margin-left: 28% !important;
+            }
+        }
+
+        @media only screen and (max-width:900px) {
+            #content {
+                margin-left: 32% !important;
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            #content {
+                margin-left: 0 !important;
+                max-width: 100% !important;
+            }
+        }
+
+        .intro-section {
+            background-color: #141716;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            color: #007bff; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .social-links a:hover {
+                text-decoration: underline;
+            }
+
+        .gallery-year {
+            background-color: #141716;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .image-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer; 
+        }
+
+            .image-item img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.3s ease;
+            }
+
+                .image-item img:hover {
+                    transform: scale(1.05);
+                }
+
+            .image-item .caption {
+                background-color: rgba(0, 0, 0, 0.7);
+                color: #fff;
+                padding: 10px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .image-item:hover .caption {
+                opacity: 1;
+            }
+
+        .image-overlay {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+            .image-overlay img {
+                max-width: 90%;
+                max-height: 90%;
+                display: block;
+            }
+
+            .image-overlay .close-btn {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                color: #fff;
+                font-size: 40px;
+                cursor: pointer;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Galerie de Dessins - Puig Romain Portefolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="article.css">
+
+    <script src="https://kit.fontawesome.com/d4f025be9d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="presentation-page body-article4">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Portefolio.html">Portefolio</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <i class="fas fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text"></div>
+        </div>
+    </div>
+
+    <article>
+        <div id="sidebar">
+            <div id="toc">
+                <a href="#intro-section">Introduction</a>
+                <a href="#year-2025">Dessins 2025</a>
+                <a href="#year-2024">Dessins 2024</a>
+                <a href="#year-2020-2023">Dessins 2020-2023</a>
+            </div>
+        </div>
+        <div id="content">
+            <section class="intro-section" id="intro-section">
+                <h1>Ma Galerie de Dessins</h1>
+                <p>
+                    Depuis des années, le dessin a été mon moteur créatif et mes choix dans mon cursus scolaire. Même si je me suis tourné vers la création de jeu vidéo, je n'ai pas arrêté d'essayer de m'améliorer sur ce que je préfère faire le plus : dessiner.
+                </p>
+                <p>
+                    Voici donc un endroit où j'ai réuni mes créations digitales (le reste est dans mes carnets de croquis :p).
+                </p>
+                <div class="social-links">
+                    <a href="URL_DE_VOTRE_TWITTER" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="URL_DE_VOTRE_ARTSTATION" target="_blank"><i class="fab fa-artstation"></i> Artstation</a>
+                </div>
+            </section>
+
+            <section class="gallery-year" id="year-2025">
+                <h2>Dessins 2025</h2>
+                <div class="image-grid">
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/01.png')">
+                        <img src="Images/GalerieImage/2025/01.png" alt="Dessin 2025-01">
+                        <div class="caption">Dessin 2025-01</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/02.png')">
+                        <img src="Images/GalerieImage/2025/02.png" alt="Dessin 2025-02">
+                        <div class="caption">Dessin 2025-02</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/03.png')">
+                        <img src="Images/GalerieImage/2025/03.png" alt="Dessin 2025-03">
+                        <div class="caption">Dessin 2025-03</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/04.png')">
+                        <img src="Images/GalerieImage/2025/04.png" alt="Dessin 2025-04">
+                        <div class="caption">Dessin 2025-04</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/05.png')">
+                        <img src="Images/GalerieImage/2025/05.png" alt="Dessin 2025-05">
+                        <div class="caption">Dessin 2025-05</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/06.png')">
+                        <img src="Images/GalerieImage/2025/06.png" alt="Dessin 2025-06">
+                        <div class="caption">Dessin 2025-06</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/07.png')">
+                        <img src="Images/GalerieImage/2025/07.png" alt="Dessin 2025-07">
+                        <div class="caption">Dessin 2025-07</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/08.png')">
+                        <img src="Images/GalerieImage/2025/08.png" alt="Dessin 2025-08">
+                        <div class="caption">Dessin 2025-08</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/09.png')">
+                        <img src="Images/GalerieImage/2025/09.png" alt="Dessin 2025-09">
+                        <div class="caption">Dessin 2025-09</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/10.png')">
+                        <img src="Images/GalerieImage/2025/10.png" alt="Dessin 2025-10">
+                        <div class="caption">Dessin 2025-10</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/11.png')">
+                        <img src="Images/GalerieImage/2025/11.png" alt="Dessin 2025-11">
+                        <div class="caption">Dessin 2025-11</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/12.png')">
+                        <img src="Images/GalerieImage/2025/12.png" alt="Dessin 2025-12">
+                        <div class="caption">Dessin 2025-12</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/13.png')">
+                        <img src="Images/GalerieImage/2025/13.png" alt="Dessin 2025-13">
+                        <div class="caption">Dessin 2025-13</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/14.png')">
+                        <img src="Images/GalerieImage/2025/14.png" alt="Dessin 2025-14">
+                        <div class="caption">Dessin 2025-14</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/15.png')">
+                        <img src="Images/GalerieImage/2025/15.png" alt="Dessin 2025-15">
+                        <div class="caption">Dessin 2025-15</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2025/16.png')">
+                        <img src="Images/GalerieImage/2025/16.png" alt="Dessin 2025-16">
+                        <div class="caption">Dessin 2025-16</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-year" id="year-2024">
+                <h2>Dessins 2024</h2>
+                <div class="image-grid">
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/01.png')">
+                        <img src="Images/GalerieImage/2024/01.png" alt="Dessin 2024-01">
+                        <div class="caption">Dessin 2024-01</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/02.png')">
+                        <img src="Images/GalerieImage/2024/02.png" alt="Dessin 2024-02">
+                        <div class="caption">Dessin 2024-02</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/03.png')">
+                        <img src="Images/GalerieImage/2024/03.png" alt="Dessin 2024-03">
+                        <div class="caption">Dessin 2024-03</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/04.png')">
+                        <img src="Images/GalerieImage/2024/04.png" alt="Dessin 2024-04">
+                        <div class="caption">Dessin 2024-04</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/05.png')">
+                        <img src="Images/GalerieImage/2024/05.png" alt="Dessin 2024-05">
+                        <div class="caption">Dessin 2024-05</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/06.png')">
+                        <img src="Images/GalerieImage/2024/06.png" alt="Dessin 2024-06">
+                        <div class="caption">Dessin 2024-06</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/07.png')">
+                        <img src="Images/GalerieImage/2024/07.png" alt="Dessin 2024-07">
+                        <div class="caption">Dessin 2024-07</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/08.png')">
+                        <img src="Images/GalerieImage/2024/08.png" alt="Dessin 2024-08">
+                        <div class="caption">Dessin 2024-08</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/09.png')">
+                        <img src="Images/GalerieImage/2024/09.png" alt="Dessin 2024-09">
+                        <div class="caption">Dessin 2024-09</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/10.png')">
+                        <img src="Images/GalerieImage/2024/10.png" alt="Dessin 2024-10">
+                        <div class="caption">Dessin 2024-10</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/11.png')">
+                        <img src="Images/GalerieImage/2024/11.png" alt="Dessin 2024-11">
+                        <div class="caption">Dessin 2024-11</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/12.png')">
+                        <img src="Images/GalerieImage/2024/12.png" alt="Dessin 2024-12">
+                        <div class="caption">Dessin 2024-12</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/13.png')">
+                        <img src="Images/GalerieImage/2024/13.png" alt="Dessin 2024-13">
+                        <div class="caption">Dessin 2024-13</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/14.png')">
+                        <img src="Images/GalerieImage/2024/14.png" alt="Dessin 2024-14">
+                        <div class="caption">Dessin 2024-14</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/15.png')">
+                        <img src="Images/GalerieImage/2024/15.png" alt="Dessin 2024-15">
+                        <div class="caption">Dessin 2024-15</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/16.png')">
+                        <img src="Images/GalerieImage/2024/16.png" alt="Dessin 2024-16">
+                        <div class="caption">Dessin 2024-16</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/17.png')">
+                        <img src="Images/GalerieImage/2024/17.png" alt="Dessin 2024-17">
+                        <div class="caption">Dessin 2024-17</div>
+                    </div>
+                    <div class="image-item" onclick="openImageOverlay('Images/GalerieImage/2024/18.png')">
+                        <img src="Images/GalerieImage/2024/18.png" alt="Dessin 2024-18">
+                        <div class="caption">Dessin 2024-18</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery-year" id="year-2020-2023">
+                <h2>Dessins 2020-2023</h2>
+                <div class="image-grid">
+                    <p>Contenu pour les années 2020-2023 à venir !</p>
+                </div>
+            </section>
+
+        </div>
+    </article>
+
+    <div class="image-overlay" onclick="closeImageOverlay()">
+        <span class="close-btn">&times;</span>
+        <img id="overlay-image" src="" alt="Image agrandie" />
+    </div>
+
+    <script>
+        function openImageOverlay(src) {
+            document.getElementById('overlay-image').src = src;
+            document.querySelector('.image-overlay').style.display = 'flex';
+        }
+
+        function closeImageOverlay() {
+            document.querySelector('.image-overlay').style.display = 'none';
+        }
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0px";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+
+</body>
+
+</html>
